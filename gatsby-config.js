@@ -31,19 +31,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          {
-            family: `Spectral`,
-            variants: [`400`]
-          },
-          {
-            family: `Cormorant`,
-            variants: [`400`]
-          },
-        ],
-      },
+        google: {
+          families: ['Bodoni Moda']
+        }
+      }
     },
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
