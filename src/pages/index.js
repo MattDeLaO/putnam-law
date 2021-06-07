@@ -91,10 +91,10 @@ const IndexPage = () => (
           height={900}
           style={{ border: "2px solid #A35257" }}
         />
-        <Title>Putnam Law</Title>
+        <Title>Putman Law</Title>
       </PhotoSection>
       <InfoSection>
-        <h2>Putnam Law Office</h2>
+        <h2>Putman Law Office</h2>
         310 W. Dickson Street, Suite 220
         <b />
         Fayetteville, AR 72703
