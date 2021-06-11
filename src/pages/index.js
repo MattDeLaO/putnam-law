@@ -91,7 +91,7 @@ const IndexPage = () => (
           height={900}
           style={{ border: "2px solid #A35257" }}
         />
-        <Title>Putman Law</Title>
+        <Title>William B. Putman</Title>
       </PhotoSection>
       <InfoSection>
         <h2>Putman Law Office</h2>
@@ -100,6 +100,8 @@ const IndexPage = () => (
         Fayetteville, AR 72703
         <b />
         (479) 287-1288
+        <b />
+        bill@putmanlawoffice.com
       </InfoSection>
       <LocationSection>
         <Caption>Office located on the second floor, above Bordino's</Caption>
