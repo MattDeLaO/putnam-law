@@ -4,7 +4,7 @@ import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-const Title = styled.h1`
+const Title = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,18 +12,26 @@ const Title = styled.h1`
   transform: translate(0, -30px);
   margin: 0% 5% 0% 5%;
   letter-spacing: 1px;
-  padding: 2%;
+  padding: 2% 4% 2% 4%;
   text-align: center;
   color: white;
   border: 2px solid #212430;
+  min-width: 50%;
 `
-const MapAndAddress = styled.div`
+const MapWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  text-align: center;
-  font-size: 12px;
-  width: 100%;
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    width: 75%;
+  }
+  @media screen and (min-width: 1224px) {
+    width: 65%;
+  }
 `
 const Content = styled.main`
   display: flex;
@@ -31,11 +39,6 @@ const Content = styled.main`
   align-items: center;
   flex-direction: column;
   margin-top: 0;
-`
-const PhotoSection = styled.figure`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 `
 const Header = styled.header`
   background: #212430;
@@ -46,53 +49,11 @@ const Header = styled.header`
   padding-right: 12%;
   padding-left: 12%;
 `
-const SubTitle = styled.h2`
-  color: white;
-  border: 2px solid #a35257;
-  padding: 2%; 
-`
-const AltSubtitle = styled.h2`
-  text-align: center;
-  background: #212430;
-  color: white;
-  padding: 2%;
-  margin-bottom: 4%;
-  border: 2px solid #a35257;
-`
 const Map = styled.div`
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 80%;
   padding-top: 56.25%;
-`
-const StyledLink = styled(props => <Link {...props} />)`
-  text-decoration: none;
-  color: white;
-`
-const LocationSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #212430;
-  color: white;
-  padding: 4%;
-  min-height: 35vh;
-  width: 100%;
-`
-const Row = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  @media screen and (min-width: 320px) {
-    flex-direction: column-reverse;
-  }
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-  }
-  @media screen and (min-width: 1224px) {
-    flex-direction: row;
-  }
 `
 const Wrapper = styled.div`
 display: flex
@@ -124,19 +85,6 @@ const Caption = styled.div`
   text-align: center;
   border: 2px solid #212430;
 `
-const AreasOfPracticeSection = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #212430;
-  color: white;
-  padding: 10%;
-  line-height: 2rem;
-  li {
-    padding: 2%;
-  }
-`
 const Address = styled.div`
   display: flex;
   flex-direction: column;
@@ -148,15 +96,56 @@ const Address = styled.div`
     color: inherit;
   }
 `
-const AboutSection = styled.section`
+const Section = styled.section`
+  background: ${props => (props.primary ? "white" : "#212430")};
+  color: ${props => (props.primary ? "black" : "white")};
   display: flex;
+  flex-direction: ${props =>
+    props.flexDirection ? props.flexDirection : "column"};
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  width: 100vw;
   line-height: 2rem;
-  padding: 10%;
+  li {
+    padding: 2%;
+  }
+  @media screen and (min-width: 320px) {
+    padding: 2% 8% 2% 8%;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 2% 10% 2% 10%;
+  }
+  @media screen and (min-width: 1224px) {
+    padding: 2% 12% 2% 12%;
+  }
 `
-const SectionTitle = styled.h2``
+const HeroImageWrapper = styled.div`
+display: flex;
+flex-direction: column;
+justifyContent: center;
+align-items: center;
+@media screen and (min-width: 320px) {
+  width: 95%;
+}
+@media screen and (min-width: 768px) {
+  width: 80%;
+}
+@media screen and (min-width: 1224px) {
+  width: 60%;
+}
+`
+const SectionTitle = styled.h2`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #212430;
+  color: white;
+  padding: 2% 4%;
+  margin-bottom: 2%;
+  border: 2px solid #a35257;
+`
+
 const IndexPage = () => (
   <Wrapper>
     <Header>
@@ -168,18 +157,20 @@ const IndexPage = () => (
 
     <Content>
       <Seo title="Home" />
-      <PhotoSection>
-        <StaticImage
-          src="../images/portrait.jpeg"
-          alt="portrait"
-          width={1200}
-          height={900}
-          style={{ border: "2px solid #A35257" }}
-        />
+      <Section primary>
+        <HeroImageWrapper>
+          <StaticImage
+            src="../images/portrait.jpeg"
+            alt="portrait"
+            width={900}
+            height={600}
+            style={{ border: "2px solid #A35257" }}
+          />
+        </HeroImageWrapper>
         <Title>William B. Putman</Title>
-      </PhotoSection>
-      <LocationSection>
-        <SubTitle>Putman Law Office</SubTitle>
+      </Section>
+      <Section primary={false}>
+        <SectionTitle>Putman Law Office</SectionTitle>
         <Address>
           <a href="https://goo.gl/maps/EkRgmLwhz7oh6Ryu9">
             310 W. Dickson Street, Suite 220
@@ -191,31 +182,27 @@ const IndexPage = () => (
           <b />
           <a href="mailto: bill@putmanlawoffice">bill@putmanlawoffice.com</a>
         </Address>
-        <Row>
-          <Picture>
-            <Caption>
-              Office located on the second floor, above Bordino's
-            </Caption>
-            <StaticImage
-              src="../images/office.jpg"
-              alt="office"
-              style={{ border: "2px solid #A35257", margin: "5%" }}
+        <MapWrapper>
+          <Map>
+            <div
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3225.101336127433!2d-94.16576288395032!3d36.06663231634457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c96eda2f7aa8a3%3A0x55b685e613731b77!2s310%20W%20Dickson%20St%20%23220%2C%20Fayetteville%2C%20AR%2072701!5e0!3m2!1sen!2sus!4v1623726760269!5m2!1sen!2sus' style='border:2px solid #A35257; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100% ' allowfullscreen='' loading='lazy'></iframe>",
+              }}
             />
-          </Picture>
-          <MapAndAddress>
-            <Map>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html:
-                    "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3225.101336127433!2d-94.16576288395032!3d36.06663231634457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c96eda2f7aa8a3%3A0x55b685e613731b77!2s310%20W%20Dickson%20St%20%23220%2C%20Fayetteville%2C%20AR%2072701!5e0!3m2!1sen!2sus!4v1623726760269!5m2!1sen!2sus' style='border:2px solid #A35257; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100% ' allowfullscreen='' loading='lazy'></iframe>",
-                }}
-              />
-            </Map>
-          </MapAndAddress>
-        </Row>
-      </LocationSection>
-      <AboutSection>
-        <AltSubtitle>About Putman Law Office</AltSubtitle>
+          </Map>
+        </MapWrapper>
+        <Picture>
+          <Caption>Office located on the second floor, above Bordino's</Caption>
+          <StaticImage
+            src="../images/office.jpg"
+            alt="office"
+            style={{ border: "2px solid #A35257", margin: "5%" }}
+          />
+        </Picture>
+      </Section>
+      <Section primary>
+        <SectionTitle>About Putman Law Office</SectionTitle>
         <p>
           William B. (“Bill”) Putman is a 1991 graduate of the University of
           Arkansas School of Law, where he served as Articles Editor of the
@@ -265,9 +252,9 @@ const IndexPage = () => (
           writing, appellate practice, and health and wellness issues affecting
           the legal profession.
         </p>
-      </AboutSection>
-      <AreasOfPracticeSection>
-        <SubTitle>Areas of Practice</SubTitle>
+      </Section>
+      <Section>
+        <SectionTitle>Areas of Practice</SectionTitle>
         <p>
           When you need an attorney, it is important to find one with the right
           kind of experience and expertise for your case. Putman Law Office has
@@ -318,7 +305,7 @@ const IndexPage = () => (
             with an emphasis on cooperative dispute resolution.
           </li>
         </ul>
-      </AreasOfPracticeSection>
+      </Section>
     </Content>
   </Wrapper>
 )
