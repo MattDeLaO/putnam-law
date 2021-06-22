@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { Header } from "../components/Header"
 
 const Title = styled.h2`
   display: flex;
@@ -39,15 +39,6 @@ const Content = styled.main`
   align-items: center;
   flex-direction: column;
   margin-top: 0;
-`
-const Header = styled.header`
-  background: #212430;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 8vh;
-  padding-right: 12%;
-  padding-left: 12%;
 `
 const Map = styled.div`
   position: relative;
@@ -120,19 +111,19 @@ const Section = styled.section`
   }
 `
 const HeroImageWrapper = styled.div`
-display: flex;
-flex-direction: column;
-justifyContent: center;
-align-items: center;
-@media screen and (min-width: 320px) {
-  width: 95%;
-}
-@media screen and (min-width: 768px) {
-  width: 80%;
-}
-@media screen and (min-width: 1224px) {
-  width: 60%;
-}
+  display: flex;
+  flex-direction: column;
+  justifycontent: center;
+  align-items: center;
+  @media screen and (min-width: 320px) {
+    width: 95%;
+  }
+  @media screen and (min-width: 768px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1224px) {
+    width: 60%;
+  }
 `
 const SectionTitle = styled.h2`
   display: flex;
@@ -145,16 +136,23 @@ const SectionTitle = styled.h2`
   margin-bottom: 2%;
   border: 2px solid #a35257;
 `
-
+const BackToTop = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #a35257;
+  transition: padding 0.7s;
+  :hover {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+`
 const IndexPage = () => (
   <Wrapper>
-    <Header>
-      {/* <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/practice-areas">Practice Areas</StyledLink>
-      <StyledLink to="/about">About</StyledLink>
-      <StyledLink to="/contact">Contact</StyledLink> */}
-    </Header>
-
+    <Header id="top" />
     <Content>
       <Seo title="Home" />
       <Section primary>
@@ -169,40 +167,9 @@ const IndexPage = () => (
         </HeroImageWrapper>
         <Title>William B. Putman</Title>
       </Section>
-      <Section primary={false}>
-        <SectionTitle>Putman Law Office</SectionTitle>
-        <Address>
-          <a href="https://goo.gl/maps/EkRgmLwhz7oh6Ryu9">
-            310 W. Dickson Street, Suite 220
-          </a>
-          <b />
-          Fayetteville, AR 72703
-          <b />
-          <a href="tel:4792871288">(479) 287-1288</a>
-          <b />
-          <a href="mailto: bill@putmanlawoffice">bill@putmanlawoffice.com</a>
-        </Address>
-        <MapWrapper>
-          <Map>
-            <div
-              dangerouslySetInnerHTML={{
-                __html:
-                  "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3225.101336127433!2d-94.16576288395032!3d36.06663231634457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c96eda2f7aa8a3%3A0x55b685e613731b77!2s310%20W%20Dickson%20St%20%23220%2C%20Fayetteville%2C%20AR%2072701!5e0!3m2!1sen!2sus!4v1623726760269!5m2!1sen!2sus' style='border:2px solid #A35257; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100% ' allowfullscreen='' loading='lazy'></iframe>",
-              }}
-            />
-          </Map>
-        </MapWrapper>
-        <Picture>
-          <Caption>Office located on the second floor, above Bordino's</Caption>
-          <StaticImage
-            src="../images/office.jpg"
-            alt="office"
-            style={{ border: "2px solid #A35257", margin: "5%" }}
-          />
-        </Picture>
-      </Section>
-      <Section primary>
-        <SectionTitle>About Putman Law Office</SectionTitle>
+
+      <Section primary={false} id="about">
+        <SectionTitle>About</SectionTitle>
         <p>
           William B. (“Bill”) Putman is a 1991 graduate of the University of
           Arkansas School of Law, where he served as Articles Editor of the
@@ -253,7 +220,7 @@ const IndexPage = () => (
           the legal profession.
         </p>
       </Section>
-      <Section>
+      <Section primary id="practice-areas">
         <SectionTitle>Areas of Practice</SectionTitle>
         <p>
           When you need an attorney, it is important to find one with the right
@@ -305,6 +272,41 @@ const IndexPage = () => (
             with an emphasis on cooperative dispute resolution.
           </li>
         </ul>
+      </Section>
+      <Section primary={false} id="contact">
+        <SectionTitle>Contact</SectionTitle>
+        <Address>
+          <a href="https://goo.gl/maps/EkRgmLwhz7oh6Ryu9">
+            310 W. Dickson Street, Suite 220
+          </a>
+          <b />
+          Fayetteville, AR 72703
+          <b />
+          <a href="tel:4792871288">(479) 287-1288</a>
+          <b />
+          <a href="mailto: bill@putmanlawoffice">bill@putmanlawoffice.com</a>
+        </Address>
+        <MapWrapper>
+          <Map>
+            <div
+              dangerouslySetInnerHTML={{
+                __html:
+                  "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3225.101336127433!2d-94.16576288395032!3d36.06663231634457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c96eda2f7aa8a3%3A0x55b685e613731b77!2s310%20W%20Dickson%20St%20%23220%2C%20Fayetteville%2C%20AR%2072701!5e0!3m2!1sen!2sus!4v1623726760269!5m2!1sen!2sus' style='border:2px solid #A35257; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100% ' allowfullscreen='' loading='lazy'></iframe>",
+              }}
+            />
+          </Map>
+        </MapWrapper>
+        <Picture>
+          <Caption>Office located on the second floor, above Bordino's</Caption>
+          <StaticImage
+            src="../images/office.jpg"
+            alt="office"
+            style={{ border: "2px solid #A35257", margin: "5%" }}
+          />
+        </Picture>
+        <BackToTop href="#top" alt="back to top">
+          back to top
+        </BackToTop>
       </Section>
     </Content>
   </Wrapper>
