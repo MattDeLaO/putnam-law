@@ -117,13 +117,17 @@ const HeroImageWrapper = styled.div`
   align-items: center;
   @media screen and (min-width: 320px) {
     width: 95%;
+    padding-top: 12%;
   }
   @media screen and (min-width: 768px) {
     width: 80%;
+    padding-top: 5%;
   }
   @media screen and (min-width: 1224px) {
     width: 60%;
+    padding-top: 1%;
   }
+  
 `
 const SectionTitle = styled.h2`
   display: flex;
@@ -150,6 +154,10 @@ const BackToTop = styled.a`
     padding-left: 15px;
   }
 `
+const Slogan = styled.h2`
+text-align: center;
+letter-spacing: 1px;
+`
 const IndexPage = () => (
   <Wrapper>
     <Header id="top" />
@@ -160,12 +168,13 @@ const IndexPage = () => (
           <StaticImage
             src="../images/portrait.jpeg"
             alt="portrait"
-            width={900}
-            height={600}
+            width={1600}
+            height={1200}
             style={{ border: "2px solid #A35257" }}
           />
         </HeroImageWrapper>
         <Title>William B. Putman</Title>
+        <Slogan>The Right Kind of Experience for Your Case</Slogan>
       </Section>
 
       <Section primary={false} id="about">

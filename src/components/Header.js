@@ -42,7 +42,7 @@ const StyledLink = styled.a`
 `
 const MobileLinkList = styled.div`
   position: absolute;
-  top: 10vh;
+  top: 9vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,8 +120,18 @@ const StyledPhoneNumber = styled.a`
     padding-top: 0%;
   }
 `
+const StyledButton = styled.button`
+background: transparent;
+`
+
+
 export const Header = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const MobileButtonWrapper = ({ children }) => (
+    <StyledButton onClick={() => setIsVisible(!isVisible)}>
+      {children}
+    </StyledButton>
+  )
   return (
     <StyledHeader>
       <DesktopHeader>
@@ -163,15 +173,24 @@ export const Header = () => {
         </StyledMobileHeader>
         {isVisible && (
           <MobileLinkList>
-            <StyledLink href="#practice-areas" alt="practice areas link">
-              Practice Areas
-            </StyledLink>
-            <StyledLink href="#about" alt="about link">
-              About
-            </StyledLink>
-            <StyledLink href="#contact" alt="contact link">
-              Contact
-            </StyledLink>
+            <MobileButtonWrapper>
+              <StyledLink href="#practice-areas" alt="practice areas link">
+                Practice Areas
+              </StyledLink>
+            </MobileButtonWrapper>
+
+            <MobileButtonWrapper>
+              <StyledLink href="#about" alt="about link">
+                About
+              </StyledLink>
+            </MobileButtonWrapper>
+
+            <MobileButtonWrapper>
+              <StyledLink href="#contact" alt="contact link">
+                Contact
+              </StyledLink>
+            </MobileButtonWrapper>
+
           </MobileLinkList>
         )}
       </MobileHeader>
