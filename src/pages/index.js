@@ -3,6 +3,7 @@ import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { Header } from "../components/Header"
+import SEOComponent from '../components/seo'
 
 const Title = styled.h2`
   display: flex;
@@ -157,9 +158,15 @@ const Slogan = styled.h2`
   text-align: center;
   letter-spacing: 1px;
 `
+const PhoneWrapper = styled.div`
+  border: 2px solid #a35257;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`
 const IndexPage = () => (
   <Wrapper>
     <Header id="top" />
+    <SEOComponent title="Home"/>
     <Content>
       <Seo title="Home" />
       <Section primary>
@@ -291,7 +298,9 @@ const IndexPage = () => (
           <b />
           Fayetteville, AR 72703
           <b />
-          <a href="tel:4792871288">(479) 287-1288</a>
+          <PhoneWrapper>
+            <a href="tel:4792871288">(479) 287-1288</a>
+          </PhoneWrapper>
           <b />
           <a href="mailto: bill@putmanlawoffice">bill@putmanlawoffice.com</a>
         </Address>
