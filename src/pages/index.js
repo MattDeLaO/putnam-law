@@ -175,61 +175,7 @@ const IndexPage = () => (
         <Title>William B. Putman</Title>
         <Slogan>The Right Kind of Experience for Your Case</Slogan>
       </Section>
-
-      <Section primary={false} id="about">
-        <SectionTitle>About</SectionTitle>
-        <p>
-          William B. (“Bill”) Putman is a 1991 graduate of the University of
-          Arkansas School of Law, where he served as Articles Editor of the
-          Arkansas Law Review. He also received his B.A. (1980) and M.A. (1982)
-          in Communication from the U of A.
-        </p>
-        <p>
-          Mr. Putman’s diverse legal career has included work in private
-          practice, public service, and corporate law. He has served as a
-          judicial clerk to the Honorable H. Franklin Waters, former Chief Judge
-          of the United States District Court for the Western District of
-          Arkansas, as Chief Deputy Attorney General for the State of Arkansas,
-          and as Associate General Counsel for Walmart Stores, Inc. But for most
-          of his career Mr. Putman has been in private practice representing
-          individuals and businesses in a variety of legal matters.
-        </p>
-        <p>
-          Mr. Putman owns and operates the Putman Law Office in Fayetteville,
-          Arkansas. His practice is limited primarily to civil litigation and
-          appeals in state and federal courts, as well as professional
-          disciplinary actions and other administrative litigation before
-          government boards and agencies. Mr. Putman is licensed to practice
-          before all state and local trial courts in Arkansas, the Arkansas
-          Supreme Court, the Arkansas Court of Appeals, the United States
-          District Courts for the Eastern and Western Districts of Arkansas, and
-          the Eighth Circuit Court of Appeals. He has also been admitted to
-          practice before the United States Supreme Court, the Tenth Circuit
-          Court of Appeals, and the United States Court of Appeals for the D.C.
-          Circuit.
-        </p>
-        <p>
-          Before attending law school Mr. Putman taught communication at the
-          University of Arkansas, University of Illinois at Urbana-Champaign,
-          and Purdue University. As an attorney, he has taught legal
-          communication at the University of Arkansas and legal writing in
-          NorthWest Arkansas Community College’s legal studies program.
-        </p>
-        <p>
-          Mr. Putman is a past President and Vice President of the W.B. Putman
-          American Inn of Court. Since 2017 he has served as a member of the
-          Arkansas Supreme Court’s Judges and Lawyers Assistance Program
-          Committee, of which he is currently Vice- Chair. He has written for
-          the Lawyers With Depression website and has contributed to The
-          Hilarious World of Depression podcast. In 2019 Mr. Putman was the
-          subject of profile articles published in The American Lawyer and on
-          the law.com website. He is a frequent speaker at continuing legal
-          education programs on subjects including legal communication, legal
-          writing, appellate practice, and health and wellness issues affecting
-          the legal profession.
-        </p>
-      </Section>
-      <Section primary id="practice-areas">
+      <Section primary={false} id="practice-areas">
         <SectionTitle>Areas of Practice</SectionTitle>
         <p>
           When you need an attorney, it is important to find one with the right
@@ -282,6 +228,59 @@ const IndexPage = () => (
             cooperative dispute resolution.
           </li>
         </ul>
+      </Section>
+      <Section primary id="about">
+        <SectionTitle>About</SectionTitle>
+        <p>
+          William B. (“Bill”) Putman is a 1991 graduate of the University of
+          Arkansas School of Law, where he served as Articles Editor of the
+          Arkansas Law Review. He also received his B.A. (1980) and M.A. (1982)
+          in Communication from the U of A.
+        </p>
+        <p>
+          Mr. Putman’s diverse legal career has included work in private
+          practice, public service, and corporate law. He has served as a
+          judicial clerk to the Honorable H. Franklin Waters, former Chief Judge
+          of the United States District Court for the Western District of
+          Arkansas, as Chief Deputy Attorney General for the State of Arkansas,
+          and as Associate General Counsel for Walmart Stores, Inc. But for most
+          of his career Mr. Putman has been in private practice representing
+          individuals and businesses in a variety of legal matters.
+        </p>
+        <p>
+          Mr. Putman owns and operates the Putman Law Office in Fayetteville,
+          Arkansas. His practice is limited primarily to civil litigation and
+          appeals in state and federal courts, as well as professional
+          disciplinary actions and other administrative litigation before
+          government boards and agencies. Mr. Putman is licensed to practice
+          before all state and local trial courts in Arkansas, the Arkansas
+          Supreme Court, the Arkansas Court of Appeals, the United States
+          District Courts for the Eastern and Western Districts of Arkansas, and
+          the Eighth Circuit Court of Appeals. He has also been admitted to
+          practice before the United States Supreme Court, the Tenth Circuit
+          Court of Appeals, and the United States Court of Appeals for the D.C.
+          Circuit.
+        </p>
+        <p>
+          Before attending law school Mr. Putman taught communication at the
+          University of Arkansas, University of Illinois at Urbana-Champaign,
+          and Purdue University. As an attorney, he has taught legal
+          communication at the University of Arkansas and legal writing in
+          NorthWest Arkansas Community College’s legal studies program.
+        </p>
+        <p>
+          Mr. Putman is a past President and Vice President of the W.B. Putman
+          American Inn of Court. Since 2017 he has served as a member of the
+          Arkansas Supreme Court’s Judges and Lawyers Assistance Program
+          Committee, of which he is currently Vice- Chair. He has written for
+          the Lawyers With Depression website and has contributed to The
+          Hilarious World of Depression podcast. In 2019 Mr. Putman was the
+          subject of profile articles published in The American Lawyer and on
+          the law.com website. He is a frequent speaker at continuing legal
+          education programs on subjects including legal communication, legal
+          writing, appellate practice, and health and wellness issues affecting
+          the legal profession.
+        </p>
       </Section>
       <Section primary={false} id="contact">
         <SectionTitle>Contact</SectionTitle>
