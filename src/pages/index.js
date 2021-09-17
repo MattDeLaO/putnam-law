@@ -127,7 +127,6 @@ const HeroImageWrapper = styled.div`
     width: 60%;
     padding-top: 1%;
   }
-  
 `
 const SectionTitle = styled.h2`
   display: flex;
@@ -155,8 +154,8 @@ const BackToTop = styled.a`
   }
 `
 const Slogan = styled.h2`
-text-align: center;
-letter-spacing: 1px;
+  text-align: center;
+  letter-spacing: 1px;
 `
 const IndexPage = () => (
   <Wrapper>
@@ -201,19 +200,20 @@ const IndexPage = () => (
           appeals in state and federal courts, as well as professional
           disciplinary actions and other administrative litigation before
           government boards and agencies. Mr. Putman is licensed to practice
-          before all state trial and appellate courts in Arkansas, as well as
-          the United States District Courts for the Eastern and Western
-          Districts of Arkansas. He has also been admitted to practice before
-          the United States Courts of Appeals for the Eighth, Tenth, and D.C.
-          Circuits, and the United States Supreme Court.
+          before all state and local trial courts in Arkansas, the Arkansas
+          Supreme Court, the Arkansas Court of Appeals, the United States
+          District Courts for the Eastern and Western Districts of Arkansas, and
+          the Eighth Circuit Court of Appeals. He has also been admitted to
+          practice before the United States Supreme Court, the Tenth Circuit
+          Court of Appeals, and the United States Court of Appeals for the D.C.
+          Circuit.
         </p>
         <p>
-          Before attending law school Mr. Putman taught courses in communication
-          at the University of Arkansas, University of Illinois at
-          Urbana-Champaign, and Purdue University. As an attorney, he has taught
-          courses in legal communication at the University of Arkansas and legal
-          writing in NorthWest Arkansas Community College’s legal studies
-          program.
+          Before attending law school Mr. Putman taught communication at the
+          University of Arkansas, University of Illinois at Urbana-Champaign,
+          and Purdue University. As an attorney, he has taught legal
+          communication at the University of Arkansas and legal writing in
+          NorthWest Arkansas Community College’s legal studies program.
         </p>
         <p>
           Mr. Putman is a past President and Vice President of the W.B. Putman
@@ -243,7 +243,8 @@ const IndexPage = () => (
             plaintiffs and defendants in state and federal trial courts in
             breach of contract, fraud, negligence, breach of fiduciary duty,
             unfair trade practices, employment, noncompete agreements, employee
-            benefits, personal and business torts, and other civil cases.
+            benefits, personal and business torts, personal injury, and other
+            civil cases.
           </li>
           <li>
             <b>Appeals.</b> Putman Law Office represents clients in appeals from
@@ -276,9 +277,9 @@ const IndexPage = () => (
             opposing counsel.
           </li>
           <li>
-            <b>Family Law.</b> Putman Law Office represents clients in a limited
-            number of divorce, custody, visitation, and child support cases,
-            with an emphasis on cooperative dispute resolution.
+            <b>Family Law.</b> Putman Law Office represents clients in divorce,
+            custody, visitation, and child support cases, with an emphasis on
+            cooperative dispute resolution.
           </li>
         </ul>
       </Section>
