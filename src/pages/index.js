@@ -3,7 +3,7 @@ import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { Header } from "../components/Header"
-import SEOComponent from '../components/seo'
+import SEOComponent from "../components/seo"
 
 const Title = styled.h2`
   display: flex;
@@ -166,7 +166,7 @@ const PhoneWrapper = styled.div`
 const IndexPage = () => (
   <Wrapper>
     <Header id="top" />
-    <SEOComponent title="Home"/>
+    <SEOComponent title="Home" />
     <Content>
       <Seo title="Home" />
       <Section primary>
@@ -292,36 +292,17 @@ const IndexPage = () => (
       <Section primary={false} id="contact">
         <SectionTitle>Contact</SectionTitle>
         <Address>
-          <a href="https://goo.gl/maps/EkRgmLwhz7oh6Ryu9">
-            310 W. Dickson Street, Suite 220
-          </a>
+          <b>P.O. Box 11186</b>
           <b />
           Fayetteville, AR 72703
           <b />
           <PhoneWrapper>
+            <b>Text or Call:</b>
             <a href="tel:4792871288">(479) 287-1288</a>
           </PhoneWrapper>
           <b />
           <a href="mailto: bill@putmanlawoffice">bill@putmanlawoffice.com</a>
         </Address>
-        <MapWrapper>
-          <Map>
-            <div
-              dangerouslySetInnerHTML={{
-                __html:
-                  "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3225.101336127433!2d-94.16576288395032!3d36.06663231634457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c96eda2f7aa8a3%3A0x55b685e613731b77!2s310%20W%20Dickson%20St%20%23220%2C%20Fayetteville%2C%20AR%2072701!5e0!3m2!1sen!2sus!4v1623726760269!5m2!1sen!2sus' style='border:2px solid #A35257; position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100% ' allowfullscreen='' loading='lazy'></iframe>",
-              }}
-            />
-          </Map>
-        </MapWrapper>
-        <Picture>
-          <Caption>Office located on the second floor, above Bordino's</Caption>
-          <StaticImage
-            src="../images/office.jpg"
-            alt="office"
-            style={{ border: "2px solid #A35257", margin: "5%" }}
-          />
-        </Picture>
         <BackToTop href="#top" alt="back to top">
           back to top
         </BackToTop>
